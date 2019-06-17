@@ -40,4 +40,4 @@ or Twitter: https://twitter.com/N_Emaminejad
 ### Citation
 If you found my work useful for your publications, please kindly cite this repository
 
-"Nastaran Emaminejad, DL_Tabular_Classification, (2019), GitHub repository, https://github.com/nemaminejad/DL_Tabular_Classification`"
+"Nastaran Emaminejad, DL_Tabular_Classification, (2019), GitHub repository, https://github.com/nemaminejad/DL_Tabular_Classification"
