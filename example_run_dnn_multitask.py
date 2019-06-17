@@ -19,8 +19,8 @@ from ref_DL_codes import run_multi_fit_search, max_norm_regularizer, leaky_relu
 ### get data
 
 target = ["var1","var2"]
-test_features = os.path.join("data","multi_test_prep_scaled_NN_3cat.csv")
-train_features = os.path.join("data","multi_train_prep_scaled_NN_3cat.csv")
+test_features = os.path.join("data","multi_test.csv")
+train_features = os.path.join("data","multi_train.csv")
 
 X, y, class_weight, unseen_X, unseen_y = load_required_data(test_features, train_features, target,weight_needed = False)
 n_f = X.shape[1]
