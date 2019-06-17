@@ -1,6 +1,5 @@
 from zlib import crc32
 import os
-import csv
 import pandas as pd 
 import matplotlib
 import matplotlib.pyplot as plt
@@ -14,7 +13,7 @@ from sklearn.base import clone
 from scipy import interp
 from  sklearn.metrics import precision_recall_fscore_support
 from sklearn.preprocessing import LabelBinarizer
-PROJECT_ROOT_DIR = ".."
+# PROJECT_ROOT_DIR = "data"
 
 
 def save_fig(fig_name, root, tight_layout=True):
@@ -211,7 +210,7 @@ def load_finl_rand_eval(test_features,train_features, final_eval,target,feature_
     # to either select features or output all features
     if feature_set is not None:
 
-        feature_path = os.path.join(PROJECT_ROOT_DIR,"data","feature_names", feature_set )
+        feature_path = os.path.join("data","feature_names", feature_set )
         features =pd.read_csv(feature_path)["featureNames"].tolist()
         new_features = []
         for f in features:
