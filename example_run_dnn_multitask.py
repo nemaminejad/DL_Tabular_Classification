@@ -1,3 +1,7 @@
+##################
+# usage: an example of a script to run the prediction model that predicts two binary target variables simultaneously 
+# Written by Nastaran Emaminejad
+##################
 
 import tensorflow as tf
 import pandas as pd
