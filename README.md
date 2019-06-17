@@ -1,6 +1,7 @@
 # DL_Tabular_Classification
 
 This Repository contains the development of deep neural network models for binary classification using a set of tabular data. 
+The deep learning framework used here is `TensorFlow`.
 Two models are developed:
 1. One single task neural network [dnnclassifer.py](https://github.com/nemaminejad/DL_Tabular_Classification/blob/master/dnnclassifier.py)
   - for binary clssification of a single target variable
