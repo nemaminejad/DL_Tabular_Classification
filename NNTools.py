@@ -1,3 +1,9 @@
+################
+
+# usage: a library of functions used for Neural Network model development and model evaluation.
+# Written by Nastaran Emaminejad
+################
+
 import tensorflow as tf
 import pandas as pd
 from LibTools import class_report
