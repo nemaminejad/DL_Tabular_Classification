@@ -10,9 +10,6 @@ import sys
 import os
 import time 
 random_state =42
-
-# PROJECT_ROOT_DIR = "data"
-
 from LibTools import load_required_data
 from functools import partial
 from multitask_dnnclassifier_alternate import MultiDNNClassifier
