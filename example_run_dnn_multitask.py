@@ -19,17 +19,17 @@ from ref_DL_codes import run_multi_fit_search, max_norm_regularizer, leaky_relu
 ### get data
 
 target = ["var1","var2"]
-test_features = os.path.join("data","multi_test.csv")
+valid_features = os.path.join("data","multi_valid.csv")
 train_features = os.path.join("data","multi_train.csv")
 
-X, y, class_weight, unseen_X, unseen_y = load_required_data(test_features, train_features, target,weight_needed = False)
+X, y, class_weight, unseen_X, unseen_y = load_required_data(valid_features, train_features, target,weight_needed = False)
 n_f = X.shape[1]
 X_train, y_train_1, y_train_2, class_weight, unseen_X, unseen_y_1, unseen_y_2 = X.values.astype(np.float32), y["var1"].values.astype(np.int32), y["var2"].values.astype(np.int32), class_weight, unseen_X.values.astype(np.float32), unseen_y["var1"].values.astype(np.int32),unseen_y["var2"].values.astype(np.int32)
 
 
-
+# we want to identify the best model with respect to the validation set
 # to do a search for parameters:
-
+#So that in each iteration, randomly a set of parameters is chosen for training of the model
 param_distribs = {
     "n_neurons": [100,300,500,1000,2000],
     "batch_size": [50,100,283,400],
@@ -48,6 +48,10 @@ param_distribs = {
     "learn_decay":[None,]
     
 }
+
+#number of iteration (or number of different combination of parameters)
+# so that for example you will have 40 different models being trained on the training set
+# details of the performance on the validation set for each of the models will be written in the resulting CSV file
 n_epochs = 1000
 n_iter = 40
 
